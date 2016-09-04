@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.scub.wifiadb.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageButtonToggleAdb"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:background="?android:selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/ic_quick_settings_wifiadb_gray_24dp" />
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/wifi_adb"
+        android:layout_below="@+id/imageButtonToggleAdb"/>
+
+
+</RelativeLayout>

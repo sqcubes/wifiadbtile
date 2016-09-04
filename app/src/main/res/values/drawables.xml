@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_wifiadb_enabled">@drawable/ic_quick_settings_wifiadb_white_24dp</drawable>
+    <drawable name="ic_wifiadb_disabled">@drawable/ic_quick_settings_wifiadb_gray_24dp</drawable>
+</resources>
