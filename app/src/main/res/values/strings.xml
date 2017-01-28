@@ -1,6 +1,6 @@
 <resources>
-    <string name="empty" />
-    <string name="app_name">Wi-Fi ADB Quick Settings Tile</string>
+    <string name="empty" translatable="false" />
+    <string name="app_name" translatable="false">Wi-Fi ADB Quick Settings Tile</string>
     <string name="wifi_adb">Wireless Debugging</string>
     <string name="starting">Starting…</string>
     <string name="stopping">Stopping…</string>
