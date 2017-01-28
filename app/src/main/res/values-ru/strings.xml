@@ -1,0 +1,6 @@
+<resources>
+    <string name="wifi_adb">Отладка по сети</string>
+    <string name="starting">Запуск…</string>
+    <string name="stopping">Остановка…</string>
+    <string name="no_su">Нет разрешений суперпользователя!</string>
+</resources>
