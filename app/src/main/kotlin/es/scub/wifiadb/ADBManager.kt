@@ -7,7 +7,6 @@ import android.os.Handler
 import android.os.Looper
 import android.support.annotation.IntDef
 import android.util.Log
-import com.google.firebase.analytics.FirebaseAnalytics
 
 internal class ADBManager(private val mContext: Context) {
     companion object {
@@ -32,11 +31,6 @@ internal class ADBManager(private val mContext: Context) {
 
     private var mAdbRefreshAsyncTask = AdbRefreshAsyncTask()
 
-    private val mFirebaseAnalytics: FirebaseAnalytics
-
-    init {
-        this.mFirebaseAnalytics = FirebaseAnalytics.getInstance(mContext)
-    }
 
     fun setOnStatusChangedListener(onStatusChangedListener: OnAdbStatusChangedListener?) {
         this.mOnStatusChangedListener = onStatusChangedListener
@@ -156,8 +150,6 @@ internal class ADBManager(private val mContext: Context) {
         // log adb start event to Firebase
         val bundle = Bundle()
         bundle.putBoolean("has_su", has_su)
-        mFirebaseAnalytics.logEvent("start_adb", bundle)
-
         resumeRefresh()
     }
 

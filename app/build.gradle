@@ -6,7 +6,7 @@ def homePath = System.properties['user.home']
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "es.sqcub.wifiadb"
         minSdkVersion 24
@@ -31,14 +31,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    flavorDimensions "developmentD", "productionD"
     productFlavors {
         development {
+            dimension "developmentD"
             applicationIdSuffix = ".dev"
             versionName = android.defaultConfig.versionName + "-dev"
             signingConfig signingConfigs.development
         }
         production {
+            dimension "productionD"
             versionName = android.defaultConfig.versionName
         }
     }
@@ -56,10 +58,5 @@ dependencies {
     compile 'com.android.support:support-annotations:25.1.0'
 
 
-    compile('com.google.firebase:firebase-core:10.0.1')
-    compile('com.google.firebase:firebase-crash:10.0.1')
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
-
-// Add to the bottom of the file
-apply plugin: 'com.google.gms.google-services'

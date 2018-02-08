@@ -23,7 +23,10 @@ class WifiAdbTileService : TileService(), ADBPresenter.ADBPresentingUI {
     }
 
     override fun onClick() {
-        mAdbManger.toggle()
+        if (isLocked)
+            unlockAndRun { mAdbManger.toggle() }
+        else
+            mAdbManger.toggle()
     }
 
     override fun onStartListening() {
